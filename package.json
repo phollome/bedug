@@ -4,7 +4,7 @@
   "description": "A logging middleware for Node.js.",
   "main": "index.js",
   "scripts": {
-    
+    "test": "DEBUG=*pebug istanbul cover --hook-run-in-context _mocha -- -R spec test --recursive; istanbul report text"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,14 @@
   "bugs": {
     "url": "https://github.com/phollome/bedug/issues"
   },
-  "homepage": "https://github.com/phollome/bedug#readme"
+  "homepage": "https://github.com/phollome/bedug#readme",
+  "dependencies": {
+    "merge-descriptors": "^1.0.1"
+  },
+  "devDependencies": {
+    "debug": "^2.2.0",
+    "istanbul": "^0.4.3",
+    "mocha": "^2.4.5",
+    "should": "^8.3.1"
+  }
 }
