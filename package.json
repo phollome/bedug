@@ -1,0 +1,22 @@
+{
+  "name": "bedug",
+  "version": "0.0.1",
+  "description": "A logging middleware for Node.js.",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/phollome/bedug.git"
+  },
+  "keywords": [
+    "Logging"
+  ],
+  "author": "Peter Holló <lordpejdar@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/phollome/bedug/issues"
+  },
+  "homepage": "https://github.com/phollome/bedug#readme"
+}
