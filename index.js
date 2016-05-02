@@ -5,18 +5,18 @@ exports = module.exports = create;
 /**
  * create bedug middlware
  * @param namespace
- * @param middleware
+ * @param consumer
  * @return {i}
  */
-function create(namespace, middleware) {
+function create(namespace, consumer) {
   var i = function() {};
   merge_descriptors(i, bedug, false);
-  i.init();
+  i.init(namespace, consumer);
   return i;
 }
 
 var bedug = {};
 
-bedug.init = function init(ns, mw) {
-
+bedug.init = function init(ns, co) {
+  this.log = co(ns);
 };
