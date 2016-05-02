@@ -4,7 +4,7 @@
   "description": "A logging middleware for Node.js.",
   "main": "index.js",
   "scripts": {
-    "test": "DEBUG=test-* istanbul cover --hook-run-in-context _mocha -- -R spec test --recursive; istanbul report text"
+    "test": "DEBUG=*test-* istanbul cover --hook-run-in-context _mocha -- -R spec test --recursive; istanbul report text"
   },
   "repository": {
     "type": "git",
