@@ -1,6 +1,6 @@
 {
   "name": "bedug",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A logging middleware for Node.js.",
   "main": "index.js",
   "scripts": {
