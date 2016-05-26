@@ -77,4 +77,5 @@ build/Release
 
 node_modules
 wallaby.json
-
+  
+.jshintrc
