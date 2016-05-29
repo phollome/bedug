@@ -1,8 +1,8 @@
 'use strict';
 
-var bedug = require('../.');
-var debug = require('debug');
-var should = require('should');
+let bedug = require('../.');
+let debug = require('debug');
+let should = require('should');
 
 describe('create middleware', () => {
   it('should create different \'debug\' middleware', () => {

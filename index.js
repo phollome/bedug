@@ -1,18 +1,18 @@
 'use strict';
 
-var _ = require('lodash');
-var merge_descriptors = require('merge-descriptors');
+let _ = require('lodash');
+let merge_descriptors = require('merge-descriptors');
 
 exports = module.exports = create;
 
-const levels = {
+const LEVELS = {
   info: 'info',
   log: 'log',
   warn: 'warn',
   error: 'error'
 };
 
-const separator = '::';
+const SEPARATOR = '::';
 
 /**
  * create bedug middlware
@@ -24,8 +24,8 @@ const separator = '::';
  *  log: Function,
  *  warn: Function,
  *  error: Function,
- *  levels: Object,
- *  separator: String
+ *  LEVELS: Object,
+ *  SEPARATOR: String
  * }}
  */
 function create(namespace, consumer) {
@@ -35,15 +35,15 @@ function create(namespace, consumer) {
   return i;
 }
 
-var bedug = {};
+let bedug = {};
 
 bedug.init = function init(ns, co) {
   if(_.has(co, 'name') && co.name == 'debug') {
-    _.each(levels, (item, key) => {
-      this[key] = co(item + separator + ns);
+    _.each(LEVELS, (item, key) => {
+      this[key] = co(item + SEPARATOR + ns);
     });
   }
 };
 
-bedug.levels = levels;
-bedug.separator = separator;
+bedug.LEVELS = LEVELS;
+bedug.SEPARATOR = SEPARATOR;
