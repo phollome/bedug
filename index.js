@@ -5,12 +5,12 @@ let merge_descriptors = require('merge-descriptors');
 
 exports = module.exports = create;
 
-const LEVELS = {
-  info: 'info',
-  log: 'log',
-  warn: 'warn',
-  error: 'error'
-};
+let info = 'info';
+let log = 'log';
+let warn = 'warn';
+let error = 'error';
+
+const LEVELS = {info, log, warn, error};
 
 const SEPARATOR = '::';
 
@@ -38,7 +38,7 @@ function create(namespace, consumer) {
 let bedug = {};
 
 bedug.init = function init(ns, co) {
-  if(_.has(co, 'name') && co.name == 'debug') {
+  if (_.has(co, 'name') && co.name == 'debug') {
     _.each(LEVELS, (item, key) => {
       this[key] = co(item + SEPARATOR + ns);
     });
